@@ -1,0 +1,148 @@
+.about {
+  padding: 60px 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 25px cyan;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease;
+}
+
+.about.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.2rem;
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Highlights */
+.highlight {
+  color: cyan;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.highlight:hover {
+  color: yellow;
+  text-shadow: 0 0 10px yellow;
+}
+
+.highlight-yellow {
+  color: yellow;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.highlight-yellow:hover {
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+}
+
+/* Hover Skills with Tooltip */
+.highlight-skill,
+.hover-skill {
+  position: relative;
+  color: #00ffcc;
+  font-weight: 600;
+  padding: 0 5px;
+  text-shadow: 0 0 10px #00ffcc;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.highlight-skill:hover,
+.hover-skill:hover {
+  color: yellow;
+  text-shadow: 0 0 15px yellow;
+}
+
+/* Tooltip styling */
+.hover-skill::after,
+.highlight-skill::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: cyan;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.hover-skill:hover::after,
+.highlight-skill:hover::after {
+  opacity: 1;
+}
+
+/* Button Group */
+.about-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.repo-button,
+.cv-button,
+.map-button,
+.cert-button {
+  padding: 12px 25px;
+  background: #00ffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #111;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px cyan;
+  position: relative;
+}
+
+.repo-button:hover,
+.cv-button:hover,
+.map-button:hover,
+.cert-button:hover {
+  background: yellow;
+  color: black;
+  box-shadow: 0 0 25px yellow;
+  transform: scale(1.05);
+}
+
+/* Certificates Section */
+.certificates {
+  margin-top: 40px;
+  text-align: center;
+  color: yellow;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

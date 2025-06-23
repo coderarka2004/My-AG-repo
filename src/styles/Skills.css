@@ -1,0 +1,25 @@
+.skills-section {
+    background: #0e0e15;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .skills-title {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .skills-subtitle {
+    color: rgb(68, 133, 238);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+  
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  

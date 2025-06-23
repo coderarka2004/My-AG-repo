@@ -1,0 +1,56 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  color: cyan;
+  font-size: 1.2rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  background: #202020;
+  border: 2px solid cyan;
+  border-radius: 10px;
+  color: white;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-button {
+  padding: 12px 20px;
+  background: cyan;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background: yellow;
+  box-shadow: 0 0 15px yellow;
+}
+
+.contact-info {
+  margin-top: 20px;
+  color: cyan;
+  text-align: center;
+  font-weight: bold;
+}

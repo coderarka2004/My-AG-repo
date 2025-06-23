@@ -1,0 +1,104 @@
+/* App.css - Global styling and shared effects */
+
+body, .App {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom right, #0a0a0a, #1c1c1c);
+  transition: background 1s ease-in-out;
+  color: white;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Scrollbar Styling (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: cyan;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: yellow;
+}
+
+/* Global animation utility classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reusable glow effect */
+.glow-cyan {
+  text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(120deg, #050505, #101010);
+  color: white;
+  scroll-behavior: smooth;
+  background-image: url("https://www.transparenttextures.com/patterns/circles.png");
+  animation: bgShift 20s linear infinite;
+}
+
+@keyframes bgShift {
+  0% { background-position: 0 0; }
+  100% { background-position: 500px 500px; }
+}
+:root {
+  --bg-color: #0a0a0a;
+  --text-color: #ffffff;
+  --accent-color: cyan;
+  --highlight-color: yellow;
+  --card-bg: rgba(0, 0, 0, 0.7);
+}
+
+
+[data-theme="light"] {
+  --bg-color: #f4f4f4;
+  --text-color: #111;
+  --accent-color: #0077ff;
+  --highlight-color: #ff9800;
+  --card-bg: #ffffff;
+}
+
+
+.glow-yellow {
+  text-shadow: 0 0 10px yellow, 0 0 20px yellow;
+}
+/* Vanta background container */
+.vanta-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Send it behind all content */
+}
+
+
+/* Section wrapper effect */
+.section-wrapper {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}

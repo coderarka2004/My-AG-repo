@@ -1,0 +1,154 @@
+/* 🚆 TRAIN RUNNING STRIP */
+.train-strip {
+  width: 100%;
+  background: linear-gradient(to right, cyan, #00ffea);
+  color: black;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.3);
+}
+
+.train-strip::before {
+  content: "🚆 All topics covered by me | AI Projects | IoT Systems | Web Dev | Embedded | ReactJS | ML | CV | Resume | Projects | 🚀 New Projects Coming Soon! ";
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 22s linear infinite;
+}
+
+.train-strip:hover::before {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* 🎯 HEADER MAIN STYLES */
+.App-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: cyan;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+  z-index: 1000;
+  position: relative;
+}
+
+.App-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.profile-flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid cyan;
+  box-shadow: 0 0 20px cyan;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px yellow;
+}
+
+.App-logo-full {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  border: 3px solid cyan;
+  box-shadow: 0 0 10px cyan;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.App-logo-full:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px yellow;
+}
+
+.text-block h1 {
+  font-size: 2.2em;
+  margin: 10px 0;
+  text-shadow: 0 0 10px cyan;
+}
+
+.text-block p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  font-size: 1.8em;
+  color: cyan;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: yellow;
+  transform: scale(1.3) rotate(5deg);
+}
+
+
+/* 📱 Responsive Styles */
+@media (max-width: 768px) {
+  .train-strip {
+    font-size: 0.8rem;
+    padding: 8px 0;
+  }
+
+  .profile-flex-row {
+    flex-direction: column;
+  }
+
+  .App-logo-full {
+    width: 100px;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .text-block h1 {
+    font-size: 1.6em;
+  }
+
+  .text-block p {
+    font-size: 1em;
+  }
+}

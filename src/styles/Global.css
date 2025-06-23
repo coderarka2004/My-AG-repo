@@ -1,0 +1,9 @@
+body, .App {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, #0f0f0f, #1a1a1a), url("https://source.unsplash.com/1600x900/?electric-circuit,technology");
+    background-size: cover;
+    color: white;
+    scroll-behavior: smooth;
+  }
+  
